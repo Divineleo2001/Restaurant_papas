@@ -19,5 +19,10 @@ function showMenu() {
       });
     }
   });
+
+  const snacks = document.getElementById("snacks");
+  snacks.querySelectorAll("input").forEach((input) => {
+    input.disabled = false;
+  });
 }
 window.addEventListener("load", showMenu);
