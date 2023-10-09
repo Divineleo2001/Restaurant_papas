@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore our daily restaurant menu and select your favorite dishes."
+    />
+    <meta name="keywords" content="Restaurant, Menu, Dishes, Daily Specials" />
+    <title>Document</title>
+    <link rel="stylesheet" href="restaurant.css" />
+    <script src="restaurant.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="select-wrapper">
+        <h1>Welcome to Our Restaurant</h1>
+        <div class="select-wrapper">
+          <div class="name">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <label for="order-type">Select your order type:</label>
+          <select
+            id="order-type"
+            onchange="updateTotal()"
+            aria-label="Select your order type"
+          >
+            <option value="dine-in" selected>Dine-In</option>
+            <option value="takeout">Takeout</option>
+          </select>
+        </div>
+        <form>
+          <div class="select-wrapper">
+            <label for="day">Select a day:</label>
+            <select
+              id="day"
+              onchange="showMenu()"
+              ariaa-label="Select a day to view the menu"
+            >
+              <option value="nil">-</option>
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+            </select>
+          </div>
+          <div class="sandwiches">
+            <h2>Sandwiches</h2>
+            <div id="monday" class="menu-item active">
+              <h2>Monday's Menu</h2>
+              <input type="radio" id="mon-item1" name="monday" value="item1" />
+              <label for="mon-item1">Tomato Mozarella</label><br />
+              <input type="radio" id="mon-item2" name="monday" value="item2" />
+              <label for="mon-item2">Chicken Salad</label>
+            </div>
+
+            <div id="tuesday" class="menu-item">
+              <h2>Tuesday's Menu</h2>
+              <input type="radio" id="tue-item1" name="tuesday" value="item1" />
+              <label for="tue-item1">Greek Salad Wrap</label><br />
+              <input type="radio" id="tue-item2" name="tuesday" value="item2" />
+              <label for="tue-item2">Toto Wrap</label>
+            </div>
+
+            <div id="wednesday" class="menu-item">
+              <h2>Wednesday's Menu</h2>
+              <input
+                type="radio"
+                id="wed-item1"
+                name="wednesday"
+                value="item1"
+              />
+              <label for="wed-item1">Red Pepper Hummus</label><br />
+              <input
+                type="radio"
+                id="wed-item2"
+                name="wednesday"
+                value="item2"
+              />
+              <label for="wed-item2">Roasted Turkey</label>
+            </div>
+
+            <div id="thursday" class="menu-item">
+              <h2>Thursday's Menu</h2>
+              <input
+                type="radio"
+                id="thurs-item1"
+                name="Thursday"
+                value="item1"
+              />
+              <label for="thurs-item1">Carrot-Ginger Hummus</label>
+              <input
+                type="radio"
+                id="thurs-item2"
+                name="Thursday"
+                value="item2"
+              />
+              <label for="thurs-item2">Egg Salad</label>
+            </div>
+
+            <div id="friday" class="menu-item">
+              <h2>Friday's Menu</h2>
+              <input type="radio" id="fri-item1" name="friday" value="item1" />
+              <label for="fri-item1">Dado Wrap</label>
+              <input type="radio" id="fri-item2" name="friday" value="item2" />
+              <label for="fri-item2">Tuna Salad</label>
+            </div>
+          </div>
+        </form>
+        <div class="divider"></div>
+        <div>
+          <input
+            type="checkbox"
+            id="gluten-bread"
+            name="gluten-bread"
+            value="gluten-bread"
+          />
+          <label for="gluten-bread">Gluten-Free Bread</label>
+        </div>
+      </section>
+     
+      <div class="Section-combination">
+        <section class="snacks">
+          <h2>Delicious Snacks Menu</h2>
+          <ul>
+            <li>
+              <input type="checkbox" id="snack1" name="snacks" value="snack1" />
+              <label for="snack1">Chips and Salsa</label>
+            </li>
+            <li>
+              <input type="checkbox" id="snack2" name="snacks" value="snack2" />
+              <label for="snack2">Hummus and Pita</label>
+            </li>
+            <li>
+              <input type="checkbox" id="snack3" name="snacks" value="snack3" />
+              <label for="snack3">Cheese and Crackers</label>
+            </li>
+            <li>
+              <input type="checkbox" id="snack4" name="snacks" value="snack4" />
+              <label for="snack4">Popcorn</label>
+            </li>
+            <li>
+              <input type="checkbox" id="snack5" name="snacks" value="snack5" />
+              <label for="snack5">Fruit Salad</label>
+            </li>
+          </ul>
+        </section>
+        <section class="drinks">
+          <h2>Drinks</h2>
+          <label for="coffee">Coffee:</label>
+          <select id="coffee" name="coffee">
+            <option value="nil">Nil</option>
+            <option value="americano">Americano</option>
+            <option value="latte">Latte</option>
+            <option value="cappuccino">Cappuccino</option>
+            <option value="espresso">Espresso</option>
+          </select>
+
+          <label for="tea">Tea:</label>
+          <select id="tea" name="tea">
+            <option value="nil">Nil</option>
+            <option value="green-tea">Green Tea</option>
+            <option value="black-tea">Black Tea</option>
+            <option value="herbal-tea">Herbal Tea</option>
+            <option value="chai-tea">Chai Tea</option>
+          </select>
+
+          <label for="soda">Soda:</label>
+          <select id="soda" name="soda">
+            <option value="nil">Nil</option>
+            <option value="cola">Cola</option>
+            <option value="lemon-lime">Lemon-Lime</option>
+            <option value="orange">Orange</option>
+            <option value="root-beer">Root Beer</option>
+          </select>
+
+          <label for="juice">Juice:</label>
+          <select id="juice" name="juice">
+            <option value="nil">Nil</option>
+            <option value="apple">Apple Juice</option>
+            <option value="orange">Orange Juice</option>
+            <option value="cranberry">Cranberry Juice</option>
+            <option value="grapefruit">Grapefruit Juice</option>
+          </select>
+        </section>
+      </div>
+      <div class="button1" >
+        
+        <button type="submit">Place Order</button>
+      </div>
+    </main>
+  </body>
+</html>

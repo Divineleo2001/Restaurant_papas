@@ -11,7 +11,6 @@ function showMenu() {
     } else {
       item.classList.remove("active");
       item.querySelectorAll("input").forEach((input) => {
-        input.checked = false;
         input.disabled = true;
         input.addEventListener("click", (e) => {
           e.preventDefault();
@@ -23,6 +22,9 @@ function showMenu() {
   const snacks = document.getElementById("snacks");
   snacks.querySelectorAll("input").forEach((input) => {
     input.disabled = false;
+    input.addEventListener("click", () => {
+      input.checked = !input.checked;
+    });
   });
 }
-window.addEventListener("load", showMenu);
+

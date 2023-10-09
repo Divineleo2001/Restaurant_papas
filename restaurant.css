@@ -1,3 +1,7 @@
+body {
+  margin: 5px;
+}
+
 .menu-item {
   width: calc(20% - 10px);
   margin: 5px;
@@ -76,4 +80,96 @@ header {
   to {
     opacity: 1;
   }
+}
+
+select {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  margin: 0 5px;
+  width: 200px;
+  height: 40px;
+}
+
+/* Style for snacks section */
+#snacks {
+  background-color: #f2f2f2;
+  padding: 16px;
+  border-radius: 4px;
+  margin-top: 32px;
+}
+
+#snacks h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+#snacks ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#snacks li {
+  margin-bottom: 8px;
+}
+
+#snacks input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+#snacks label {
+  font-size: 16px;
+}
+/* Center the drink selection dropdowns */
+.drinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.snacks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Section-combination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.name {
+  text-align: center;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+/* #gluten-bread {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+} */
+.divider {
+  border-top: 1px solid #000;
+  margin: 8px auto;
+  width: 50%;
+ 
+}
+.button1 {
+  margin: 8px auto;
+  width: 25%;
+
+}
+button {
+  width: 200px;
+  height: 50px;
 }
